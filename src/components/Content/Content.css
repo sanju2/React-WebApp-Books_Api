@@ -1,0 +1,91 @@
+p,
+a,
+div,
+button {
+  font-size: 12px;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:focus,
+div:focus {
+  outline: none;
+}
+
+.content-container button:hover {
+  text-decoration: underline;
+}
+
+.overview-genre__title {
+  font-size: 17px;
+  margin: 15px 0;
+}
+
+
+.overview-books,
+.genre-container__title-block {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+}
+
+.overview-books {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.genre-container__title-block {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.genre-container__title-block h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 5px 0 0 0;
+}
+
+.genre-container__title-block p {
+  margin: 0 0 5px 0;
+  font-style: italic;
+}
+
+@media (min-width: 641px) {
+  p,
+  a,
+  div {
+    font-size: 14px;
+  }
+
+  .overview-genre__title {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 961px) {
+  p,
+  a,
+  div {
+    font-size: 14px;
+  }
+  .content-container {
+    min-height: 90vh;
+    margin-bottom: 10vh;
+  }
+}
+
+@media (min-width: 1281px) {
+  .content-container {
+    margin: var(--nav-height) 5vw 0 2vw;
+  }
+
+  .genre-container {
+    padding-top: 3vw;
+  }
+}

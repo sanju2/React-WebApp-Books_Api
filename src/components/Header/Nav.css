@@ -1,0 +1,290 @@
+:root {
+  --nav-height: 38vw;
+}
+
+.nav__site-title,
+.search input,
+.search__type,
+.search__btn,
+.genre-menu__sub-genre h5,
+.genre-menu__sub-genre button,
+.date-picker button,
+.date-picker input {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.nav,
+div.search,
+.genre-menu,
+.genre-menu__btns {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  min-height: var(--nav-height);
+  width: 100vw;
+  flex-direction: column;
+  background: #fffef8;
+  z-index: 1;
+}
+
+.nav__title-corner {
+  position: relative;
+  height: calc(var(--nav-height) - 18vw);
+  width: calc(var(--nav-height) - 18vw);
+  background: linear-gradient(135deg, #787257 50%, #f1edda 50%);
+}
+
+.nav__site-title {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  font-size: 25px;
+  line-height: 20px;
+  margin: 0;
+  color: #77756b;
+}
+
+.nav__home-btn {
+  margin: 5px;
+  padding: 0;
+  font-size: 18px;
+  color: #333126;
+}
+
+div.search {
+  position: absolute;
+  top: 3vh;
+  align-self: center;
+  margin-left: 20vw;
+  border: none;
+}
+
+.search,
+.date-picker input {
+  border-radius: 4px;
+  border: 2px solid #d9d5c4;
+  margin: 0 0.5vh;
+}
+
+.search input {
+  width: 30vw;
+}
+
+.search__type {
+  min-width: 70px;
+  background-image: url("https://image.flaticon.com/icons/png/512/60/60995.png");
+  background-repeat: no-repeat;
+  background-size: 8px;
+  background-position: 90%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search__btn,
+.date-picker__go-btn {
+  color: white;
+  background: #aaa58e;
+  border: none;
+}
+
+.genre-menu {
+  justify-content: space-around;
+  border-top: 2px solid #e5e0c9;
+  border-bottom: 2px solid #e5e0c9;
+}
+
+.genre-menu__sub-genre {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  width: 24vw;
+}
+
+.genre-menu__sub-genre > button {
+  border-radius: 4px 4px 0 0;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.genre-menu__sub-genre h5 {
+  margin: 0;
+}
+
+.genre-menu__btns {
+  position: absolute;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  min-width: 60vw;
+  max-height: 85vh;
+  margin-top: 0px;
+  padding: 3px;
+  border-radius: 0 4px 4px 4px;
+  background: #aaa58e;
+  cursor: default;
+  visibility: hidden;
+}
+
+.genre-menu__btns button {
+  padding: 2px;
+}
+
+.sub-genre--left .genre-menu__btns {
+  border-radius: 4px 0 4px 4px;
+  right: 0;
+}
+
+.sub-genre--left .genre-menu__btns button {
+  align-self: flex-end;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.genre-menu__btns[data-ref="Misc."] button {
+  max-width: 50vw;
+  padding-right: 15px;
+  white-space: normal;
+}
+
+.genre-menu__btns[data-ref="Misc."] {
+  min-width: 100vw;
+  max-height: 60vh;
+}
+
+.genre-menu__btns button:hover {
+  text-decoration: underline;
+}
+
+.genre-menu__sub-genre > button:focus,
+.genre-menu__sub-genre:hover > button {
+  background: #aaa58e;
+  color: white;
+}
+
+.genre-menu__sub-genre > button:focus + .genre-menu__btns,
+.genre-menu__btns:hover {
+  visibility: visible;
+}
+
+.genre-menu__btns button {
+  align-self: flex-start;
+  text-align: left;
+  cursor: pointer;
+}
+
+.date-picker input,
+.date-picker button {
+  padding: 2px;
+}
+
+.date-picker {
+  margin: 2px auto;
+}
+
+.date-picker input {
+  width: 25vw;
+  cursor: default;
+}
+
+.date-picker__go-btn {
+  margin-left: 5px;
+  border-radius: 100%;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+div.react-datepicker-popper {
+  transform: none !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+.content-container {
+  margin: var(--nav-height) 5px 0 5px;
+  padding-top: 2vh;
+  min-height: 100vh;
+  font-family: Quicksand, sans-serif;
+  background: #fffef8;
+}
+
+@media screen and (min-width: 641px) {
+  :root {
+    --nav-height: 20vw;
+  }
+
+  div.search {
+    top: calc(var(--nav-height) / 3);
+    margin-left: 0;
+  }
+
+  .search input,
+  .search__type,
+  .search__btn,
+  .genre-menu__sub-genre h5,
+  .genre-menu__sub-genre button,
+  .date-picker button,
+  .date-picker input {
+    font-size: 15px;
+  }
+
+  .nav__title-corner {
+    height: calc(var(--nav-height) - 8vw);
+    width: calc(var(--nav-height) - 8vw);
+  }
+
+  .genre-menu__btns {
+    min-width: 30vw;
+  }
+
+  .genre-menu__btns[data-ref="Misc."] {
+    min-width: 65vw;
+    max-height: 50vh;
+  }
+
+  .div.react-datepicker-popper {
+    right: 30vw;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  :root {
+    --nav-height: 15vw;
+  }
+
+  div.search {
+    top: calc(var(--nav-height) / 4);
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  :root {
+    --nav-height: 10vw;
+  }
+
+  .nav__title-corner {
+    width: calc(var(--nav-height) - 3vw);
+    height: calc(var(--nav-height) - 3vw);
+  }
+
+  .nav__site-title {
+    font-size: 35px;
+    line-height: 25px;
+  }
+}
+

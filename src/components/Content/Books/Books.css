@@ -1,0 +1,402 @@
+:root {
+    --book-size: 25vw;
+  }
+
+.book-container {
+    width: var(--book-size);
+    margin-bottom: 5px;
+  }
+  
+  .book-placeholder {
+    width: var(--book-size);
+  }
+  
+  .book-hide {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .book-container__gen-info {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .book-container__rank {
+      font-size: 14px;
+  }
+
+  .book-container__gen-info img {
+    max-width: 100%;
+    cursor: pointer;
+  }
+  
+  .book-container__cover {
+    display: flex;
+    width: 100%;
+  }
+  
+  .book-container__cover img {
+    width: calc(var(--book-size) + 1vw);
+    height: calc((var(--book-size) + 1vw) * 1.5);
+  }
+  
+  .book-container__gen-info button,
+  .srch-bk-container__author-info button {
+    width: 110%;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .book-container__author-info,
+  .srch-bk-container__author-info {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: flex-start;
+    width: 110%;
+    overflow: hidden;
+  }
+  
+  .book-container__author-btns {
+    width: 70%;
+  }
+  
+  .book-container__author-info p,
+  .srch-bk-container p {
+    margin: 0px 3px 0 0;
+    font-size: 13px;
+    line-height: 1;
+  }
+  
+  .book-container__author-info button {
+    font-size: 12px;
+    width: 99%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .book-container__week-list p {
+    margin: 0;
+    white-space: pre;
+    font-style: italic;
+    color: lightslategray;
+  }
+  
+  .book-container__ratings {
+    margin: 5px 0;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  }
+  
+  .book-container[data-ref="genre"],
+  .book-container[data-ref="book"] {
+    margin-bottom: 15px;
+  }
+  
+  .book-container__cover[data-ref="genre"] img {
+    width: calc(var(--book-size) + 5vw);
+    height: calc((var(--book-size) + 5vw) * 1.5);
+  }
+  
+  .book-container__description {
+    margin: 0 10px;
+    padding-right: 5px;
+    min-width: 60vw;
+  }
+  
+  .book-container__description h4,
+  .book-container__description p {
+    font-size: 13px;
+    margin: 0 0 5px 0;
+  }
+  
+  .book-container__author-btns[data-ref="genre"],
+  .book-container__author-btns[data-ref="book"] {
+    width: 100px;
+  }
+  
+  .book-container[data-ref="genre"] button,
+  .book-container[data-ref="book"] button {
+    width: 32vw;
+  }
+  
+  .book-container[data-ref="book"] button.book-title {
+    pointer-events: none;
+  }
+  
+  .book-container__sub-info {
+    font-size: 13px;
+  }
+  
+  .sub-info__rating {
+    white-space: nowrap;
+  }
+
+  .book-single-container {
+    padding: 0 2vw;
+  }
+  
+  .sngl-bk-main {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+  }
+  
+  .srch-author-container .author-main h2 {
+    margin-left: 0;
+  }
+  
+  .sngl-bk-main__cover-title {
+    align-self: center;
+  }
+  
+  .sngl-bk-main__cover-title h3 {
+    font-size: 14px;
+  }
+  
+  .sngl-bk-main__cover-title img {
+    width: calc(var(--book-size) + 40vw);
+  }
+  
+  .sngl-bk-main__dscrpt {
+    width: 90vw;
+    margin: 10px 0;
+  }
+  
+  .sngl-bk-main__dscrpt h5 {
+    font-size: 20px;
+  }
+  
+  .sngl-bk-sub {
+    margin-bottom: 2vh;
+  }
+
+  
+.srch-bk-container {
+    width: var(--book-size);
+    margin: 0 3vw 5vw 3vw;
+  }
+
+  .srch-bk-container__indx  {
+    font-size: 14px;
+}
+  
+  .srch-bk-container__cover {
+    max-width: var(--book-size);
+    max-height: calc(var(--book-size) * 1.5);
+  }
+  
+  .srch-bk-container__title {
+    font-size: 13px;
+    margin: 0;
+  }
+  
+  .book-hide > p {
+    width: 110%;
+  }
+  
+  @media (min-width: 641px) {
+    :root {
+      --book-size: 20vw;
+    }
+
+    
+  .book-title {
+    font-size: 16px;
+  }
+
+  .book-container__gen-info button,
+  .book-container__gen-info p,
+  .book-container__sub-info {
+    padding-top: 5px;
+  }
+
+  .book-container__author-info button {
+    font-size: 14px;
+  }
+
+  .book-container__week-list p {
+    width: 130%;
+  }
+
+  .booklist-container {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 5%;
+  }
+
+  .book-container__rank {
+    font-size: 18px;
+}
+
+  .book-container[data-ref="genre"] {
+    width: 44vw;
+  }
+
+  .book-container[data-ref="genre"] img {
+    width: calc(var(--book-size) - 10vw);
+    height: calc((var(--book-size) - 10vw) * 1.5);
+  }
+
+  .book-container__description {
+    min-width: auto;
+  }
+
+  .book-container__description h4,
+  .book-container__description p {
+    font-size: 15px;
+  }
+
+  .sngl-bk-main__cover-title img {
+    width: calc(var(--book-size) + 10vw);
+  }
+
+  .sngl-bk-main__cover-title h3 {
+    font-size: 16px;
+  }
+
+  .sngl-bk-main__cover-title button {
+    font-size: 14px;
+  }
+  
+  .srch-bk-container__indx  {
+      font-size: 18px;
+  }
+
+  .srch-bk-container__author-info button {
+    font-size: 13px;
+  }
+  
+  .srch-bk-list {
+    width: 85vw;
+    align-self: center;
+  }
+
+  .srch-bk-container {
+    margin: 0 0 2vh 0;
+  }
+
+  .srch-bk-container h5 {
+    font-size: 13px;
+  }
+
+  .srch-bk-container__author-info > p {
+    font-size: 13px;
+    margin-top: 5px;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 961px) {
+    :root {
+      --book-size: 10vw;
+    }
+    .book-container__week-list p {
+        width: 120%;
+      }
+    
+      .booklist-container {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0;
+        padding-left: 2vw;
+      }
+    
+      .book-container[data-ref="genre"] {
+        position: relative;
+        width: 25vw;
+        padding-right: 7vw;
+      }
+    
+      .book-container[data-ref="genre"] img {
+        min-width: calc((var(--book-size) + 5vw));
+        min-height: calc((var(--book-size) + 5vw) * 1.5);
+      }
+    
+      .book-container__description {
+        min-width: 63%;
+      }
+    
+      .book-container[data-ref="genre"] .book-title {
+        width: auto;
+      }
+    
+      .book-container[data-ref="book"] {
+        width: calc(var(--book-size) + 5vw);
+      }
+    
+      .sngl-bk-main__cover-title {
+        align-self: flex-start;
+      }
+    
+      .sngl-bk-main__cover-title h3 {
+        font-size: 20px;
+      }
+    
+      .sngl-bk-main__cover-title button {
+        font-size: 16px;
+      }
+    
+      .sngl-bk-main__dscrpt {
+        /* width: 85vw; */
+      }
+    
+      .sngl-bk-main__dscrpt p {
+        font-size: 17px;
+      }
+    
+      .srch-bk-container {
+        width: calc(var(--book-size) + 5vw);
+      }
+}
+
+@media (min-width: 1281px) {
+    :root {
+      --book-size: 8vw;
+    }
+
+    .book-container[data-ref="genre"] {
+        width: calc(var(--book-size) + 10vw);
+        padding-right: 4vw;
+      }
+    
+      .book-container[data-ref="genre"] img {
+        min-width: calc(var(--book-size));
+        min-height: calc(var(--book-size) * 1.5);
+      }
+    
+      .book-container[data-ref="book"] {
+        align-self: center;
+      }
+    
+      .book-single-container .book-container__description {
+        min-width: 100%;
+      }
+}

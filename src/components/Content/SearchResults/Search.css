@@ -1,0 +1,112 @@
+.srch-container {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: column;
+}
+
+.srch-container h2 {
+  font-size: 25px;
+  margin: 0 0 2vh 2vw;
+}
+
+.srch-author-container {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3vw 0;
+}
+
+#authorInfo {
+  width: 90vw;
+  margin: 2vw 0 0 2vw;
+}
+
+#authorInfo a {
+  display: inline;
+}
+
+.srch-author-container__auth-name,
+.srch-author-container a,
+.srch-author-container p {
+  margin: 0;
+  display: block;
+}
+
+.srch-bk-list {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.srch-pagination {
+  display: inline-block;
+  align-self: center;
+  margin: 10px;
+}
+
+.srch-pagination button {
+  font-size: 14px;
+}
+
+.srch-pagination button.current-pg {
+  color: blue;
+  pointer-events: none;
+}
+
+.no-results {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-results img {
+  max-width: 80vw;
+}
+
+@media (min-width: 641px) {
+  .srch-author-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #authorInfo {
+    width: 60vw;
+    margin: 0 0 0 2vw;
+  }
+
+  .no-results {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    font-size: calc(12px + 1vw);
+  }
+
+  .no-results img,
+  .no-results p {
+    align-self: center;
+  }
+
+  .no-results img {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 961px) {
+  #authorInfo {
+    font-size: 15px;
+  }
+}
