@@ -5,7 +5,7 @@
   "homepage": "https://dan2d.github.io/react-best-selling-books/",
   "dependencies": {
     "react": "^16.8.6",
-    "react-content-loader": "^4.2.1",
+    "react-content-loader": "^4.3.4",
     "react-datepicker": "^2.7.0",
     "react-dom": "^16.8.6",
     "react-rating": "^1.7.2",
